@@ -1,0 +1,249 @@
+$small: 300px;
+$medium: 980px;
+$large: 1250px;
+
+$primary: #0361ff;
+$secondary: white;
+$gray : #4b4b4b;
+
+$font-family: 'Fira Sans',sans-serif;
+$font-family-sec: 'Poppins',sans-serif;
+
+$def-margin: 30px;
+$main-width: 90%;
+$padd-width: 5%;
+
+
+body {
+  font-family: $font-family;
+  font-weight: 200;
+  padding: 15px 0;
+}
+
+
+@mixin flex($justify: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: $justify;
+  text-align: center;
+}
+
+%font-large {
+  font-size: 55px;
+  font-weight: 500;
+  font-family: $font-family-sec;
+}
+%font-med {
+  font-size: 40px;
+  font-weight: 400;
+}
+%font-small {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/*--ELEMENTS--*/
+button {
+  font-family: $font-family;
+  background-color: transparent;
+  color: $gray;
+  border: 1px solid $gray;
+}
+
+.button-hero {
+  background-color: $primary;
+  color: $secondary;
+  padding: 20px 20px;
+  font-size: 15px;
+  font-weight: 400;
+  border: $primary;
+}
+
+
+/*--HEADER--*/
+
+header {
+  @include flex($justify: space-between);
+  width: 95%;
+  margin: 0;
+  margin: 20px auto;
+  ul {
+    @include flex;
+    li {
+      margin: 0 10px;
+      list-style-type: none;
+      display: none;
+    }
+  }
+  @media screen and (min-width: $medium) {
+    margin: 0 auto;
+    ul > li {
+      display: block;
+    }
+    button {
+      display : none;
+    }
+  }
+  @media screen and (min-width: $large) {
+    width: $main-width;
+
+  }
+}
+
+
+/*--SECTIONS--*/
+
+.section{
+  width: $main-width;
+  margin: 0 auto;
+  margin-top: 80px;
+  @include flex($justify:space-between, $direction: column);
+  div {
+    @include flex($direction: column);
+    h1 {
+      @extend %font-large;
+      margin-top: $def-margin;
+      color: $gray;
+    }
+    h2 {
+      @extend %font-small;
+      margin-top: $def-margin;
+      line-height: 1.8;
+    }
+    button {
+      margin-top: $def-margin;
+    }
+  }
+  img {
+    margin-top: 30px;
+    width: 90%;
+  }
+  @media screen and (min-width: $medium) {
+    @include flex;
+    width: 95%;
+    div {
+      text-align: left;
+      align-items: flex-start;
+    }
+    img {
+      margin-left: 30px;
+    }
+  }
+  @media screen and (min-width: $large) {
+    width: $main-width;
+    @include flex($justify:space-between, $direction: row);
+    div {
+      width: 40%;
+      h1 {
+        font-size: 55px;
+      }
+    }
+  }
+}
+
+
+.section-2{
+  padding: 0 $padd-width;
+  div {
+    h1 {
+      @extend %font-med;
+    }
+    img {
+      width: 90%;
+    }
+  }
+  @media screen and (min-width: $medium) {
+    padding: 0 2.5%;
+    img {
+      width: 50%;
+      margin-left: 0;
+      order: 2;
+    }
+    div {
+      order: 1;
+    }
+  }
+  @media screen and (min-width: $large) {
+    width: $main-width;
+    padding: 0 $padd-width;
+  }
+}
+
+#section-2-id {
+  background-color: $primary;
+  color: $secondary;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  div h1 {
+    color: white;
+  }
+}
+
+#section-3-id{
+  @media screen and (min-width: $medium) {
+    img {
+      margin-right: 50px;
+      order: 1;
+    }
+    div {
+      order: 2;
+    }
+  }
+}
+
+.section-3 {
+  @include flex($direction: column);
+  padding: 50px $padd-width;
+  width: $main-width;
+  margin-top: 80px;
+
+  h1 {
+    @extend %font-large;
+    color: $gray;
+  }
+  h2 {
+    @extend %font-small;
+    margin-top: $def-margin;
+    line-height: 1.8;
+  }
+  img {
+    margin-top: $def-margin;
+    width: 80%;
+  }
+}
+#section-5-id{
+  background-color: black;
+  color: white;
+  h1 {
+    background: linear-gradient(41deg ,#f474ff,#6060ed 66%,#0d3e34);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+
+/*--FOOTER--*/
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 100px;
+
+  .footer-lists{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    ul {
+      margin: 0 50px 20px 50px;
+    }
+
+    li {
+      @extend %font-small;
+    }
+    .footer-title{
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "mockflow-landing-page-copy",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xelphin-fever/mockflow-landing-page-copy.git"
+  },
+  "keywords": [],
+  "author": "xelphin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xelphin-fever/mockflow-landing-page-copy/issues"
+  },
+  "homepage": "https://github.com/xelphin-fever/mockflow-landing-page-copy#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.6",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
