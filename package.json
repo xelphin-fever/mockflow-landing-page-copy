@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/xelphin-fever/mockflow-landing-page-copy/issues"
   },
-  "homepage": "https://github.com/xelphin-fever/mockflow-landing-page-copy#readme",
+  "homepage": "https://github.com/xelphin-fever/mockflow-landing-page-copy",
   "devDependencies": {
     "css-loader": "^5.2.6",
     "node-sass": "^6.0.0",
